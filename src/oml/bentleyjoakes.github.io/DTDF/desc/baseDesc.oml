@@ -16,13 +16,10 @@ description <https://bentleyjoakes.github.io/DTDF/desc/baseDesc#> as baseDesc {
 	
 	// TIME SCALES
 	instance slower_trt : DTDFVocab:TimeScale [
-		base:desc "Slower than real-time"
-	]
-	instance rt : DTDFVocab:TimeScale [
-		base:desc "Real-time"
+		base:desc "The DT is synchronized with updated road construction and traffic datasets."
 	]
 	instance faster_trt : DTDFVocab:TimeScale [
-		base:desc "Faster than real-time"
+		base:desc "Interactive computation with near-instant response time based on static or preloaded data"
 	]
 	
 	// LIFE-CYCLE STAGES

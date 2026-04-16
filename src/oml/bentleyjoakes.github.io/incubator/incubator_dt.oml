@@ -12,17 +12,23 @@ description <https://bentleyjoakes.github.io/incubator/incubator_dt#> as incubat
 	
 	// SERVICES (C6)
 	
+
 	instance what_if_service : DTDFVocab:Service[
-		DTDFVocab:provides traffic_simulation_results
-		DTDFVocab:atStage baseDesc:operation
+	    base:desc "Interactive simulation service that computes traffic scenarios under different road closure or disruption conditions"
+	    DTDFVocab:provides traffic_simulation_results
+	    DTDFVocab:atStage baseDesc:operation
 	]
+	
 	instance visualization_dashboard : DTDFVocab:Service[
-		DTDFVocab:provides visualization
-		DTDFVocab:atStage baseDesc:operation
+	    base:desc "Web-based visualization service providing interactive map and dashboard for monitoring road network state and simulations"
+	    DTDFVocab:provides visualization
+	    DTDFVocab:atStage baseDesc:operation
 	]
+	
 	instance construction_prediction_service : DTDFVocab:Service [
-		DTDFVocab:provides construction_prediction
-		DTDFVocab:atStage baseDesc:operation
+	    base:desc "Predictive analytics service using historical and spatial data to estimate future road construction needs and impacts"
+	    DTDFVocab:provides construction_prediction
+	    DTDFVocab:atStage baseDesc:operation
 	]
 	
 	// ENABLERS (C11)
@@ -30,40 +36,52 @@ description <https://bentleyjoakes.github.io/incubator/incubator_dt#> as incubat
 	instance leaflet_map : DTDFVocab:Enabler [
 		DTDFVocab:enables what_if_service
 		DTDFVocab:enables visualization_dashboard
+		base:desc "Interactive map library used to display road network layers, traffic segments, and construction zones"
 	]
 	instance angular_frontend : DTDFVocab:Enabler [
 	    DTDFVocab:enables visualization_dashboard
+	    base:desc "Web frontend framework responsible for rendering the DTInsight dashboard and user interface"
 	]
 	instance flask_rest_api_backend : DTDFVocab:Enabler [
 		DTDFVocab:enables what_if_service
 		DTDFVocab:enables visualization_dashboard
 		DTDFVocab:enables construction_prediction_service
+		base:desc "REST API backend providing data access, processing, and orchestration for services"
 	]
 	instance postgreSQL_database : DTDFVocab:Enabler [
 		DTDFVocab:enables what_if_service
 		DTDFVocab:enables visualization_dashboard
+		base:desc "Relational database storing structured road network data, traffic information, and simulation results"
 	]
 	instance ml_prediction_model : DTDFVocab:Enabler [
 		DTDFVocab:enables construction_prediction_service
+		base:desc "Machine learning model used to predict construction needs and traffic impact patterns"
 	]
 	instance graph_construction : DTDFVocab:Enabler [
 		DTDFVocab:enables what_if_service
+		base:desc "Graph-based processing engine used to model and analyze road network relationships for scenario simulation"
 	]
 	
 	// MODELS / DATA
 	
+
 	instance road_construction_db : DTDFVocab:Data [
-		DTDFVocab:inputTo postgreSQL_database
-		DTDFVocab:inputTo ml_prediction_model
+	    base:desc "Structured dataset containing road construction activities, including work zones, and schedules"
+	    DTDFVocab:inputTo postgreSQL_database
+	    DTDFVocab:inputTo ml_prediction_model
 	]
+	
 	instance road_segment_geometry : DTDFVocab:Data [
-		DTDFVocab:inputTo postgreSQL_database
-		DTDFVocab:inputTo ml_prediction_model
-		DTDFVocab:inputTo graph_construction
+	    base:desc "Geospatial dataset describing road network topology"
+	    DTDFVocab:inputTo postgreSQL_database
+	    DTDFVocab:inputTo ml_prediction_model
+	    DTDFVocab:inputTo graph_construction
 	]
+	
 	instance speed_travel_time : DTDFVocab:Data [
-		DTDFVocab:inputTo postgreSQL_database
-		DTDFVocab:inputTo ml_prediction_model
+	    base:desc "Traffic performance dataset containing speed and travel time measurements across road segments over time"
+	    DTDFVocab:inputTo postgreSQL_database
+	    DTDFVocab:inputTo ml_prediction_model
 	]
 	
 	// INSIGHTS/ACTIONS (C17)
