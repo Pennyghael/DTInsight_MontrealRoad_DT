@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/flexcell/flexcell_dt#"
+     xml:base="https://bentleyjoakes.github.io/flexcell/flexcell_dt"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:flexcell="https://bentleyjoakes.github.io/flexcell/flexcell_dt#"
+     xmlns:DTDFVocab="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt">
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base"/>
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#"/>
+        <oml:prefix>flexcell</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsAutomatic -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsAutomatic"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#FlexCellDT -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#FlexCellDT">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin"/>
+        <DTDFVocab:multiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DTDFVocab:multiplicity>
+        <DTDFVocab:purpose>enhance the functionality of the PT through the DT services</DTDFVocab:purpose>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#RabbitMQ_FMU -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#RabbitMQ_FMU">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#working_space_commands"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#commands -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#commands">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#deviation_alarm -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#deviation_alarm">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#deviation_checking -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#deviation_checking">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <DTDFVocab:atStage rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#operation"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#deviation_alarm"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#discrete_positions_action -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#discrete_positions_action">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_manager -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_manager">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#deviation_checking"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#what_if_sim"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#working_space_commands"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_schemas -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_schemas">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_manager"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#flexcell_space_discretization -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#flexcell_space_discretization">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_manager"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#maestro"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#robotics_toolbox"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#force -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#force">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <DTDFVocab:IsAutomatic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</DTDFVocab:IsAutomatic>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#force_action -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#force_action">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#kinematic_models -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#kinematic_models">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_manager"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#robotics_toolbox"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#maestro -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#maestro">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#what_if_sim"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#opening -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#opening">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <DTDFVocab:IsAutomatic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</DTDFVocab:IsAutomatic>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#positions -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#positions">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <DTDFVocab:asData rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#robots_positioning"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <DTDFVocab:IsAutomatic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</DTDFVocab:IsAutomatic>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#positions_action -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#positions_action">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#real_time_viz_insight -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#real_time_viz_insight">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#robotics_toolbox -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#robotics_toolbox">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#what_if_sim"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#robots_positioning -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#robots_positioning">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#dt_manager"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#torque -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#torque">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <DTDFVocab:IsAutomatic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</DTDFVocab:IsAutomatic>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#trajectory_viz -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#trajectory_viz">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#slower_trt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#unity -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#unity">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#visualization"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#what_if_sim"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#urdf_models -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#urdf_models">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#unity"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#velocity_action -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#velocity_action">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#visualization -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#visualization">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <DTDFVocab:atStage rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#operation"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#real_time_viz_insight"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#trajectory_viz"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#what_if_sim -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#what_if_sim">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <DTDFVocab:atStage rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#operation"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#trajectory_viz"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/flexcell/flexcell_dt#working_space_commands -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/flexcell/flexcell_dt#working_space_commands">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <DTDFVocab:atStage rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#operation"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#commands"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#discrete_positions_action"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#force_action"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#positions_action"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/flexcell/flexcell_dt#velocity_action"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

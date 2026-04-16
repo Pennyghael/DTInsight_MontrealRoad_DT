@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#"
+     xml:base="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:RabbitMQVocab="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab">
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab"/>
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#"/>
+        <oml:prefix>RabbitMQVocab</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RouteExchange"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#route -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#route">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLtoSourceRoute"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routeKey -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routeKey">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#SourceRoute"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#sourceComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#sourceComponent">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSourceComponent"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLTarget -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLTarget">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange_name_str -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange_name_str">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routing_key_str -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routing_key_str">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#source_str -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#source_str">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSourceComponent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSourceComponent">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLtoSourceRoute -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLtoSourceRoute">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RouteExchange -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RouteExchange">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#SourceRoute -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#SourceRoute">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>sourceComponent derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSourceComponent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#sourceComponent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>route derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLtoSourceRoute"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#route"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>exchange derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RouteExchange"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>routeKey derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#SourceRoute"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routeKey"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

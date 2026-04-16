@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/incubator/incubator_deploy#"
+     xml:base="https://bentleyjoakes.github.io/incubator/incubator_deploy"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Location="https://bentleyjoakes.github.io/DTaaS/Location#"
+     xmlns:RabbitMQVocab="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#"
+     xmlns:incubator_deploy="https://bentleyjoakes.github.io/incubator/incubator_deploy#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/incubator/incubator_deploy">
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTaaS/Location"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt"/>
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_deploy#"/>
+        <oml:prefix>incubator_deploy</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#route -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#route"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routeKey -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routeKey"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#sourceComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#sourceComponent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/Location#file_loc_str -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/Location#file_loc_str"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSource"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLTarget -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLTarget"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange_name_str -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#exchange_name_str"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routing_key_str -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#routing_key_str"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#source_str -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#source_str"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_exchange -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_exchange">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName"/>
+        <RabbitMQVocab:exchange_name_str>Incubator_AMQP</RabbitMQVocab:exchange_name_str>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_routing_key -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_routing_key">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey"/>
+        <RabbitMQVocab:exchange rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_exchange"/>
+        <RabbitMQVocab:routing_key_str>incubator.record.driver.state</RabbitMQVocab:routing_key_str>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_source -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_source">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source"/>
+        <RabbitMQVocab:routeKey rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_routing_key"/>
+        <RabbitMQVocab:source_str>low_level_driver</RabbitMQVocab:source_str>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_deploy#sensor1ML -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_deploy#sensor1ML">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+        <RabbitMQVocab:route rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_source"/>
+        <RabbitMQVocab:sourceComponent rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#temp_sensor_1"/>
+        <RabbitMQVocab:MLSource>t2</RabbitMQVocab:MLSource>
+        <RabbitMQVocab:MLTarget>temp_sensor_1</RabbitMQVocab:MLTarget>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_deploy#sensor2ML -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_deploy#sensor2ML">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+        <RabbitMQVocab:route rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_source"/>
+        <RabbitMQVocab:sourceComponent rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#temp_sensor_2"/>
+        <RabbitMQVocab:MLSource>t2</RabbitMQVocab:MLSource>
+        <RabbitMQVocab:MLTarget>temp_sensor_2</RabbitMQVocab:MLTarget>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_deploy#sensor3ML -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_deploy#sensor3ML">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+        <RabbitMQVocab:route rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_deploy#incubator_source"/>
+        <RabbitMQVocab:sourceComponent rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#temp_sensor_3"/>
+        <RabbitMQVocab:MLSource>t3</RabbitMQVocab:MLSource>
+        <RabbitMQVocab:MLTarget>temp_sensor_3</RabbitMQVocab:MLTarget>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#four_para_model -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#four_para_model">
+        <Location:file_loc_str>models/plant_models/four_parameters_model/four_parameter_model.py</Location:file_loc_str>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

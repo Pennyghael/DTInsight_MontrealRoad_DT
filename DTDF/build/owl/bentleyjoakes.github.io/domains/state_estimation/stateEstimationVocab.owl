@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#"
+     xml:base="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:stateEstimationVocab="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab">
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#"/>
+        <oml:prefix>stateEstimationVocab</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#namespace -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#namespace"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#prefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#prefix"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#relationEntity -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#relationEntity"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#hasSource -->
+
+
+    <owl:ObjectProperty rdf:about="http://opencaesar.io/oml#hasSource"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#hasTarget -->
+
+
+    <owl:ObjectProperty rdf:about="http://opencaesar.io/oml#hasTarget"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#hasNoise -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#hasNoise">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Noise"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#FunctionNoise"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#implements -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#implements">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimation"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Implements"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Constant -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Constant">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Covariance -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Covariance">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#FunctionNoise -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#FunctionNoise">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#HiddenStateVariable -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#HiddenStateVariable">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Implements -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Implements">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#InitialValue -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#InitialValue">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Value"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Input -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Input">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#KalmanFilter -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#KalmanFilter">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#MeasurementFunction -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#MeasurementFunction">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Noise -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Noise">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#ObservedStateVariable -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#ObservedStateVariable">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Output -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Output">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Parameter -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Parameter">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimation -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimation">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateTransitionFunction -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateTransitionFunction">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Variable"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Value -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Value">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Variable -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Variable">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hasNoise derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#FunctionNoise"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#hasNoise"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>implements derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Implements"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#implements"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

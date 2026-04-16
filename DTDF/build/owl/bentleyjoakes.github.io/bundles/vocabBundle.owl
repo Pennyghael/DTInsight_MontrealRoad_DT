@@ -1,0 +1,831 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/bundles/vocabBundle#"
+     xml:base="https://bentleyjoakes.github.io/bundles/vocabBundle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vbundle="https://bentleyjoakes.github.io/bundles/vocabBundle#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/bundles/vocabBundle">
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTaaS/Location"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab"/>
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/bundles/vocabBundle#"/>
+        <oml:prefix>vbundle</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#VocabularyBundle"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ActingComponent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ActingComponent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Constellation -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Constellation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTEvolution -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTEvolution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTFidelity -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTFidelity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataOwnershipPrivacy -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataOwnershipPrivacy">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Deployment -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Deployment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DeploymentDetails -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DeploymentDetails">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Environment -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Environment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityConsideration -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityConsideration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasAgent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasEnvironment -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasEnvironment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasImplementation -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasImplementation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasSystem -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasSystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasTimeScale -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasTimeScale">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegration -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegrationRelation -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegrationRelation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Implementation -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Implementation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Multiplicity -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Multiplicity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SecuritySafety -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SecuritySafety">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Standardization -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Standardization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#System -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#System">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemComponent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemComponent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechDetails -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechDetails">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechnicalConnection -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechnicalConnection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScale -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScale">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#VirtualToPhysical -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#VirtualToPhysical">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextEvoStage -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextEvoStage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/base#Contains -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/base#Contains">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSourceComponent -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSourceComponent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLtoSourceRoute -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLtoSourceRoute">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RouteExchange -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RouteExchange">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#SourceRoute -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#SourceRoute">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Constant -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Constant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Covariance -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Covariance">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#FunctionNoise -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#FunctionNoise">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#HiddenStateVariable -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#HiddenStateVariable">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable"/>
+        <owl:disjointWith rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#ObservedStateVariable"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Implements -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Implements">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#InitialValue -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#InitialValue">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Value"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Input -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Input">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#KalmanFilter -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#KalmanFilter">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#MeasurementFunction -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#MeasurementFunction">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function"/>
+        <owl:disjointWith rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateTransitionFunction"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Noise -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Noise">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#ObservedStateVariable -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#ObservedStateVariable">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Output -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Output">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Parameter -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimation -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateTransitionFunction -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateTransitionFunction">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateVariable">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Variable"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Value -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Value">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Variable -->
+
+
+    <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Variable">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ActingComponent"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Constellation"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTEvolution"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTFidelity"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataOwnershipPrivacy"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Deployment"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DeploymentDetails"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Environment"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityConsideration"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasAgent"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasEnvironment"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasImplementation"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasSystem"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasTimeScale"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegration"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegrationRelation"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Implementation"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Multiplicity"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SecuritySafety"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Standardization"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#System"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemComponent"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechDetails"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechnicalConnection"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScale"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextEvoStage"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/base#Contains"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#ExchangeName"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLSourceComponent"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MLtoSourceRoute"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#MessageListener"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RouteExchange"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#RoutingKey"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#Source"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTaaS/RabbitMQVocab#SourceRoute"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Constant"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Covariance"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Function"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#FunctionNoise"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Implements"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Input"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Noise"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Output"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Parameter"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimation"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#StateEstimationImplementer"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Value"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/domains/state_estimation/stateEstimationVocab#Variable"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+            <rdf:Description rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#VirtualToPhysical"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

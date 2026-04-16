@@ -1,0 +1,1963 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#"
+     xml:base="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:DTDFVocab="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab">
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base"/>
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#"/>
+        <oml:prefix>DTDFVocab</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#deploymentDetails -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#deploymentDetails">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Deployment"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DeploymentDetails"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enabledBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enabledBy">
+        <owl:inverseOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <oml:relationBase rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#evolution -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#evolution">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTEvolution"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#fidelityConsideration -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#fidelityConsideration">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityThing"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityConsideration"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTFidelity"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#fromData -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#fromData">
+        <owl:inverseOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <oml:relationBase rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hIntegration -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hIntegration">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegration"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegrationRelation"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasAgent -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasAgent">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasAgent"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasEnvironment -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasEnvironment">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Environment"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasEnvironment"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasImplementation -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasImplementation">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ImplementationThing"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Implementation"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasImplementation"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasInput">
+        <owl:inverseOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Input"/>
+        <oml:relationBase rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasSystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasSystem">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#System"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasSystem"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScale"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasTimeScale"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Input"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextStage -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextStage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextEvoStage"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedData -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedData">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedFrom">
+        <owl:inverseOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedData"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent"/>
+        <oml:relationBase rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#providedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#providedBy">
+        <owl:inverseOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProvidedThing"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <oml:relationBase rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#providedService -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#providedService">
+        <owl:inverseOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <oml:relationBase rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProvidedThing"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#techDetails -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#techDetails">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+        <rdfs:range rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechnicalConnection"/>
+        <oml:relationEntity rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechDetails"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasVisualization -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasVisualization">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsAutomatic -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsAutomatic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AutomaticEnabledThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsCommEnabler -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsCommEnabler">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#MultiplicityThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose">
+        <rdfs:domain rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#PurposeThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ActingComponent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ActingComponent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Action">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AutomaticEnabledThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProvidedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AutomaticEnabledThing -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AutomaticEnabledThing">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ImplementationThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#ContainedElement"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Constellation -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Constellation">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#isContainedIn"/>
+                <owl:allValuesFrom rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTEvolution -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTEvolution">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTFidelity -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTFidelity">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Input"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataOwnershipPrivacy -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataOwnershipPrivacy">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AutomaticEnabledThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Deployment -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Deployment">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DeploymentDetails -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DeploymentDetails">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#MultiplicityThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#PurposeThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#ContainedElement"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Environment -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Environment">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#ContainedElement"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityConsideration -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityConsideration">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityThing -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityThing">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasAgent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasAgent">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasEnvironment -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasEnvironment">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasImplementation -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasImplementation">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasSystem -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasSystem">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasTimeScale -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasTimeScale">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegration -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegration">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegrationRelation -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegrationRelation">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Implementation -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Implementation">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ImplementationThing -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ImplementationThing">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Input -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Input">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProvidedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Model">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Input"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Multiplicity -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Multiplicity">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#MultiplicityThing -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#MultiplicityThing">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProvidedThing -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProvidedThing">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#PurposeThing -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#PurposeThing">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SecuritySafety -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SecuritySafety">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ConnectionComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Standardization -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Standardization">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#System -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#System">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#MultiplicityThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#PurposeThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#ContainedElement"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemComponent -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemComponent">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#PurposeThing"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#ContainedElement"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechDetails -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechDetails">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechnicalConnection -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechnicalConnection">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScale -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScale">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base#DescribedThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#VirtualToPhysical -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#VirtualToPhysical">
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTComponent"/>
+        <rdfs:subClassOf rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScaleThing"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextEvoStage -->
+
+
+    <owl:Class rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextEvoStage">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hIntegration derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegrationRelation"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hIntegration"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>evolution derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTEvolution"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#evolution"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inputTo derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#InputTo"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>producedData derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ProducedData"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedData"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>provides derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Provides"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>techDetails derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechDetails"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#techDetails"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>nextStage derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextEvoStage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#nextStage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>atStage derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#AtStage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>fidelityConsideration derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DTFidelity"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#fidelityConsideration"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>asData derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataInput"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>deploymentDetails derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DeploymentDetails"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#deploymentDetails"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>enables derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enables"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hasAgent derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasAgent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasAgent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hasEnvironment derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasEnvironment"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasEnvironment"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hasImplementation derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasImplementation"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasImplementation"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hasSystem derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasSystem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasSystem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hasTimeScale derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HasTimeScale"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

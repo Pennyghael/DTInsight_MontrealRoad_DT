@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/incubator/incubator_pt#"
+     xml:base="https://bentleyjoakes.github.io/incubator/incubator_pt"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:base="https://bentleyjoakes.github.io/DTDF/vocab/base#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DTDFVocab="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#"
+     xmlns:incubator_pt="https://bentleyjoakes.github.io/incubator/incubator_pt#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt">
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt"/>
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#"/>
+        <oml:prefix>incubator_pt</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#namespace -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#namespace"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#prefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#prefix"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#asData"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasAgent -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasAgent"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasEnvironment -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasEnvironment"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasSystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasSystem"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#producedFrom"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/base#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/base#contains"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsAutomatic -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#IsAutomatic"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/base#desc -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/base#desc"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#city_operators -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#city_operators">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent"/>
+        <base:desc>Municipal planners and road maintenance teams</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#construction_data_trans -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#construction_data_trans">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <DTDFVocab:asData rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#road_construction_db"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <DTDFVocab:producedFrom rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#construction_dataset"/>
+        <DTDFVocab:IsAutomatic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</DTDFVocab:IsAutomatic>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#construction_dataset -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#construction_dataset">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#constructions -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#constructions">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ActingComponent"/>
+        <base:desc>Road areas affected by ongoing construction or maintenance work</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#montreal_road_network -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#montreal_road_network">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#System"/>
+        <base:contains rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#constructions"/>
+        <base:contains rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#road_segments"/>
+        <DTDFVocab:multiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DTDFVocab:multiplicity>
+        <DTDFVocab:purpose>support the city on roadwork decision</DTDFVocab:purpose>
+        <base:desc>The road network of Montreal</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#pt -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#pt">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SystemUnderStudy"/>
+        <DTDFVocab:hasAgent rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#road_users"/>
+        <DTDFVocab:hasEnvironment rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#urban_environment"/>
+        <DTDFVocab:hasSystem rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#montreal_road_network"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#road_segment_data_trans -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#road_segment_data_trans">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <DTDFVocab:asData rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#road_segment_geometry"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <DTDFVocab:producedFrom rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#road_segment_dataset"/>
+        <DTDFVocab:IsAutomatic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</DTDFVocab:IsAutomatic>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#road_segment_dataset -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#road_segment_dataset">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#road_segments -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#road_segments">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#ActingComponent"/>
+        <base:desc>Road sections used for vehicle circulation</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#road_users -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#road_users">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Agent"/>
+        <base:desc>Drivers, cyclists, pedestrians, and public transport users</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#surrounding_infrastructure -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#surrounding_infrastructure">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <base:desc>Buildings, bridges, and adjacent urban infrastructure</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#traffic_data_trans -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#traffic_data_trans">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataTransmitted"/>
+        <DTDFVocab:asData rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#speed_travel_time"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <DTDFVocab:producedFrom rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#traffic_dataset"/>
+        <DTDFVocab:IsAutomatic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</DTDFVocab:IsAutomatic>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#traffic_dataset -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#traffic_dataset">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SensingComponent"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#urban_environment -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#urban_environment">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Environment"/>
+        <base:contains rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#surrounding_infrastructure"/>
+        <base:contains rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_pt#weather_conditions"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_pt#weather_conditions -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_pt#weather_conditions">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Component"/>
+        <base:desc>Weather conditions affecting traffic and road safety</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

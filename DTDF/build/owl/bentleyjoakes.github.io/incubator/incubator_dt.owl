@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bentleyjoakes.github.io/incubator/incubator_dt#"
+     xml:base="https://bentleyjoakes.github.io/incubator/incubator_dt"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:base="https://bentleyjoakes.github.io/DTDF/vocab/base#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DTDFVocab="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#"
+     xmlns:incubator="https://bentleyjoakes.github.io/incubator/incubator_dt#">
+    <owl:Ontology rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt">
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab"/>
+        <owl:imports rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/base"/>
+        <oml:namespace rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#"/>
+        <oml:prefix>incubator</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#atStage"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#enables"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#hasTimeScale"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#inputTo"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides -->
+
+
+    <owl:ObjectProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#provides"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#multiplicity"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#purpose"/>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/DTDF/vocab/base#desc -->
+
+
+    <owl:DatatypeProperty rdf:about="https://bentleyjoakes.github.io/DTDF/vocab/base#desc"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#MontrealRoadDT -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#MontrealRoadDT">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DigitalTwin"/>
+        <DTDFVocab:multiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DTDFVocab:multiplicity>
+        <DTDFVocab:purpose>monitor, visualize, and predict road network conditions and construction impacts in Montreal</DTDFVocab:purpose>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#angular_frontend -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#angular_frontend">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#visualization_dashboard"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#constellation -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#constellation">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Constellation"/>
+        <base:desc>The system integrates multiple software components including an Angular frontend, Leaflet-based map visualization, Node.js backend services, PostgreSQL data storage, and machine learning prediction modules.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#construction_prediction -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#construction_prediction">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <base:desc>prediction of future construction needed</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#construction_prediction_service -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#construction_prediction_service">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <DTDFVocab:atStage rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#operation"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#construction_prediction"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#data_owneship_privacy -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#data_owneship_privacy">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#DataOwnershipPrivacy"/>
+        <base:desc>Datasets have been provided online to the public. No privacy-related data are stored.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#deployment -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#deployment">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Deployment"/>
+        <base:desc>The DT is deployed as a web-based application accessible through a browser.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#evolution_stage -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#evolution_stage">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#EvolutionStage"/>
+        <base:desc>The DT was engineered based on a joint engineering approach. For the evolution, 10 milestones have been defined: identifying the physics for the PT, building the plant models with, characterizing the heating power, building the first physical prototype, experimentally refining the parameters for the plant model, creating the controller model, deploying the controller code into the physical controller, deploying the visualization service, providing services for state estimation and anomaly detection, and providing the service for optimizing the control policy.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#fidelity_consideration -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#fidelity_consideration">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#FidelityConsideration"/>
+        <base:desc>The models have been calibrated against experimental data and the predictive accuracy of the best model is within 2°C. The models have been validated in a controlled environment.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#flask_rest_api_backend -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#flask_rest_api_backend">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#construction_prediction_service"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#visualization_dashboard"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#what_if_service"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#graph_construction -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#graph_construction">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#what_if_service"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#horizontal_integration -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#horizontal_integration">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#HoriIntegration"/>
+        <base:desc>There is horizontal integration with the micro-services of the Incubator DT. The DT is able to exchange information with other information systems over RabbitMQ.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#leaflet_map -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#leaflet_map">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#visualization_dashboard"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#what_if_service"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#life_cycle_stage -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#life_cycle_stage">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#LifeCycleStage"/>
+        <base:desc>The DT supports the design and the service phases. In the service phase, it supports creating, executing, saving, analyzing, evolving, and terminating.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#ml_prediction_model -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#ml_prediction_model">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#construction_prediction_service"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#multiplcity -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#multiplcity">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Multiplicity"/>
+        <base:desc>The current implementation has no multiplicities, however, it is possible to deploy multiple DTs for the same PT.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#postgreSQL_database -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#postgreSQL_database">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Enabler"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#visualization_dashboard"/>
+        <DTDFVocab:enables rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#what_if_service"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#road_construction_db -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#road_construction_db">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#ml_prediction_model"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#postgreSQL_database"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#road_segment_geometry -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#road_segment_geometry">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#graph_construction"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#ml_prediction_model"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#postgreSQL_database"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#security_safety -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#security_safety">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#SecuritySafety"/>
+        <base:desc>Communication can be TLS encrypted through the RabbitMQ broker. The physical controller counts with a safety consideration that turns off system if the temperature read is above 60°C or if the network connection is unstable.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#speed_travel_time -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#speed_travel_time">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Data"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#ml_prediction_model"/>
+        <DTDFVocab:inputTo rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#postgreSQL_database"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#standardization -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#standardization">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Standardization"/>
+        <base:desc>Communication between services is performed through RESTful HTTP APIs and geospatial data.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#technical_connection -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#technical_connection">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TechnicalConnection"/>
+        <base:desc>The frontend communicates with the backend over HTTP REST APIs, while the backend accesses the PostgreSQL database and prediction services.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#traffic_simulation_results -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#traffic_simulation_results">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#faster_trt"/>
+        <base:desc>what-if simulation of traffic under different road closure scenarios</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#twinning_time_scale -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#twinning_time_scale">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#TimeScale"/>
+        <base:desc>The DT is synchronized with updated road construction and traffic datasets.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#virtual_to_physical -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#virtual_to_physical">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#VirtualToPhysical"/>
+        <base:desc>The DT provides insights and scenario analysis that support decision-making for road planning and construction management.</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#visualization -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#visualization">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Insight"/>
+        <DTDFVocab:hasTimeScale rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#rt"/>
+        <base:desc>visualization of road traffic and construction events on the map</base:desc>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#visualization_dashboard -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#visualization_dashboard">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <DTDFVocab:atStage rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#operation"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#visualization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bentleyjoakes.github.io/incubator/incubator_dt#what_if_service -->
+
+
+    <owl:NamedIndividual rdf:about="https://bentleyjoakes.github.io/incubator/incubator_dt#what_if_service">
+        <rdf:type rdf:resource="https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#Service"/>
+        <DTDFVocab:atStage rdf:resource="https://bentleyjoakes.github.io/DTDF/desc/baseDesc#operation"/>
+        <DTDFVocab:provides rdf:resource="https://bentleyjoakes.github.io/incubator/incubator_dt#traffic_simulation_results"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+
