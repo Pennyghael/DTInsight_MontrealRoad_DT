@@ -131,13 +131,19 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+
           git add "$SCREENSHOT_NAME"
-          git add "website/static/images/architecture.png"
-          git add "website/static/data_dump.yaml"
-          git add "website/themes/my-theme/layouts/partials/characteristics-table.html"
-          git add "website/static/DTInsight_web_export"
+          git add website/static/images/architecture.png
+          git add website/static/data_dump.yaml
+          git add website/themes/my-theme/layouts/partials/characteristics-table.html
+          git add website/static/DTInsight_web_export
+
           git commit -m "Added CI screenshot, characteristics table, and DTInsight web export for commit ${GITHUB_SHA}"
-          git push
+
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin main
           
       # Save website directory as artifact for next job
       - name: Archive website directory
