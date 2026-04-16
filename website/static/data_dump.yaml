@@ -1,156 +1,156 @@
 Services :
 	visualization_dashboard
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/TimeScaleThing/Thing/Service/NamedIndividual/ConceptInstance
-		enabledBy : angular_frontend/flask_rest_api_backend/leaflet_map/postgreSQL_database
+		type : Thing/DTComponent/Service/ContainedElement/DescribedThing/FidelityThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
 		desc : Web-based visualization service providing interactive map and dashboard for monitoring road network state and simulations
-		atStage : operation
-		provides : visualization
 		sameAs : visualization_dashboard
-	construction_prediction_service
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/TimeScaleThing/Thing/Service/NamedIndividual/ConceptInstance
-		enabledBy : flask_rest_api_backend/ml_prediction_model
-		desc : Predictive analytics service using historical and spatial data to estimate future road construction needs and impacts
 		atStage : operation
-		provides : construction_prediction
-		sameAs : construction_prediction_service
+		enabledBy : postgreSQL_database/leaflet_map/angular_frontend/flask_rest_api_backend
+		provides : visualization
 	what_if_service
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/TimeScaleThing/Thing/Service/NamedIndividual/ConceptInstance
-		enabledBy : flask_rest_api_backend/graph_construction/leaflet_map/postgreSQL_database
+		type : Thing/DTComponent/Service/ContainedElement/DescribedThing/FidelityThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
 		desc : Interactive simulation service that computes traffic scenarios under different road closure or disruption conditions
-		atStage : operation
-		provides : traffic_simulation_results
 		sameAs : what_if_service
+		atStage : operation
+		enabledBy : postgreSQL_database/graph_construction/leaflet_map/flask_rest_api_backend
+		provides : traffic_simulation_results
+	construction_prediction_service
+		type : Thing/DTComponent/Service/ContainedElement/DescribedThing/FidelityThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
+		desc : Predictive analytics service using historical and spatial data to estimate future road construction needs and impacts
+		sameAs : construction_prediction_service
+		atStage : operation
+		enabledBy : ml_prediction_model/flask_rest_api_backend
+		provides : construction_prediction
 Enablers :
-	angular_frontend
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Enabler/Thing/NamedIndividual/ConceptInstance
-		desc : Web frontend framework responsible for rendering the DTInsight dashboard and user interface
-		enables : visualization_dashboard
-		sameAs : angular_frontend
-	flask_rest_api_backend
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Enabler/Thing/NamedIndividual/ConceptInstance
-		desc : REST API backend providing data access, processing, and orchestration for services
-		enables : visualization_dashboard/construction_prediction_service/what_if_service
-		sameAs : flask_rest_api_backend
-	graph_construction
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Enabler/Thing/NamedIndividual/ConceptInstance
-		desc : Graph-based processing engine used to model and analyze road network relationships for scenario simulation
-		hasInput : road_segment_geometry
-		enables : what_if_service
-		sameAs : graph_construction
-	leaflet_map
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Enabler/Thing/NamedIndividual/ConceptInstance
-		desc : Interactive map library used to display road network layers, traffic segments, and construction zones
-		enables : visualization_dashboard/what_if_service
-		sameAs : leaflet_map
 	ml_prediction_model
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Enabler/Thing/NamedIndividual/ConceptInstance
+		type : Thing/DTComponent/Enabler/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
 		desc : Machine learning model used to predict construction needs and traffic impact patterns
-		hasInput : road_construction_db/road_segment_geometry/speed_travel_time
-		enables : construction_prediction_service
 		sameAs : ml_prediction_model
+		enables : construction_prediction_service
+		hasInput : speed_travel_time/road_segment_geometry/road_construction_db
 	postgreSQL_database
-		type : DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Enabler/Thing/NamedIndividual/ConceptInstance
+		type : Thing/DTComponent/Enabler/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
 		desc : Relational database storing structured road network data, traffic information, and simulation results
-		hasInput : road_construction_db/road_segment_geometry/speed_travel_time
-		enables : visualization_dashboard/what_if_service
 		sameAs : postgreSQL_database
+		enables : visualization_dashboard/what_if_service
+		hasInput : speed_travel_time/road_segment_geometry/road_construction_db
+	graph_construction
+		type : Thing/DTComponent/Enabler/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
+		desc : Graph-based processing engine used to model and analyze road network relationships for scenario simulation
+		sameAs : graph_construction
+		enables : what_if_service
+		hasInput : road_segment_geometry
+	leaflet_map
+		type : Thing/DTComponent/Enabler/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
+		desc : Interactive map library used to display road network layers, traffic segments, and construction zones
+		sameAs : leaflet_map
+		enables : visualization_dashboard/what_if_service
+	angular_frontend
+		type : Thing/DTComponent/Enabler/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
+		desc : Web frontend framework responsible for rendering the DTInsight dashboard and user interface
+		sameAs : angular_frontend
+		enables : visualization_dashboard
+	flask_rest_api_backend
+		type : Thing/DTComponent/Enabler/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
+		desc : REST API backend providing data access, processing, and orchestration for services
+		sameAs : flask_rest_api_backend
+		enables : visualization_dashboard/what_if_service/construction_prediction_service
 Models :
 
 ProvidedThings :
-	construction_prediction
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/ProvidedThing/TimeScaleThing/ConnectionComponent/Insight/Thing/NamedIndividual/ConceptInstance
-		hasTimeScale : slower_trt
-		providedBy : construction_prediction_service
-		desc : prediction of future construction needed
-		sameAs : construction_prediction
-	traffic_simulation_results
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/ProvidedThing/TimeScaleThing/ConnectionComponent/Insight/Thing/NamedIndividual/ConceptInstance
-		hasTimeScale : faster_trt
-		providedBy : what_if_service
-		desc : what-if simulation of traffic under different road closure scenarios
-		sameAs : traffic_simulation_results
 	visualization
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/ProvidedThing/TimeScaleThing/ConnectionComponent/Insight/Thing/NamedIndividual/ConceptInstance
-		hasTimeScale : slower_trt
-		providedBy : visualization_dashboard
+		type : ConnectionComponent/Thing/Insight/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/ProvidedThing/NamedIndividual/ConceptInstance
 		desc : visualization of road traffic and construction events on the map
 		sameAs : visualization
+		hasTimeScale : slower_trt
+		providedBy : visualization_dashboard
+	construction_prediction
+		type : ConnectionComponent/Thing/Insight/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/ProvidedThing/NamedIndividual/ConceptInstance
+		desc : prediction of future construction needed
+		sameAs : construction_prediction
+		hasTimeScale : slower_trt
+		providedBy : construction_prediction_service
+	traffic_simulation_results
+		type : ConnectionComponent/Thing/Insight/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/ProvidedThing/NamedIndividual/ConceptInstance
+		desc : what-if simulation of traffic under different road closure scenarios
+		sameAs : traffic_simulation_results
+		hasTimeScale : faster_trt
+		providedBy : what_if_service
 Data transmitted :
 	traffic_data_trans
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/AutomaticEnabledThing/DataTransmitted/Thing/NamedIndividual/ConceptInstance
-		hasTimeScale : slower_trt
-		producedFrom : traffic_dataset
-		asData : speed_travel_time
-		IsAutomatic : true
+		type : ConnectionComponent/Thing/DataTransmitted/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/AutomaticEnabledThing/NamedIndividual/ConceptInstance
 		sameAs : traffic_data_trans
+		hasTimeScale : slower_trt
+		IsAutomatic : true
+		asData : speed_travel_time
+		producedFrom : traffic_dataset
 	road_segment_data_trans
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/AutomaticEnabledThing/DataTransmitted/Thing/NamedIndividual/ConceptInstance
-		hasTimeScale : slower_trt
-		producedFrom : road_segment_dataset
-		asData : road_segment_geometry
-		IsAutomatic : true
+		type : ConnectionComponent/Thing/DataTransmitted/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/AutomaticEnabledThing/NamedIndividual/ConceptInstance
 		sameAs : road_segment_data_trans
-	construction_data_trans
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/AutomaticEnabledThing/DataTransmitted/Thing/NamedIndividual/ConceptInstance
 		hasTimeScale : slower_trt
-		producedFrom : construction_dataset
-		asData : road_construction_db
 		IsAutomatic : true
+		asData : road_segment_geometry
+		producedFrom : road_segment_dataset
+	construction_data_trans
+		type : ConnectionComponent/Thing/DataTransmitted/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/AutomaticEnabledThing/NamedIndividual/ConceptInstance
 		sameAs : construction_data_trans
+		hasTimeScale : slower_trt
+		IsAutomatic : true
+		asData : road_construction_db
+		producedFrom : construction_dataset
 Sensors :
 	traffic_dataset
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/Thing/SensingComponent/NamedIndividual/ConceptInstance
-		producedData : traffic_data_trans
+		type : ConnectionComponent/Thing/SensingComponent/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
 		sameAs : traffic_dataset
+		producedData : traffic_data_trans
 	construction_dataset
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/Thing/SensingComponent/NamedIndividual/ConceptInstance
-		producedData : construction_data_trans
+		type : ConnectionComponent/Thing/SensingComponent/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
 		sameAs : construction_dataset
+		producedData : construction_data_trans
 	road_segment_dataset
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/Thing/SensingComponent/NamedIndividual/ConceptInstance
-		producedData : road_segment_data_trans
+		type : ConnectionComponent/Thing/SensingComponent/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
 		sameAs : road_segment_dataset
+		producedData : road_segment_data_trans
 System :
 	constructions
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/Thing/ActingComponent/NamedIndividual/ConceptInstance
-		desc : Road areas affected by ongoing construction or maintenance work
+		type : ActingComponent/ConnectionComponent/Thing/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
 		isContainedIn : montreal_road_network
+		desc : Road areas affected by ongoing construction or maintenance work
 		sameAs : constructions
 	road_segments
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/TimeScaleThing/ConnectionComponent/Thing/ActingComponent/NamedIndividual/ConceptInstance
-		desc : Road sections used for vehicle circulation
+		type : ActingComponent/ConnectionComponent/Thing/ContainedElement/DescribedThing/Component/TimeScaleThing/ImplementationThing/NamedIndividual/ConceptInstance
 		isContainedIn : montreal_road_network
+		desc : Road sections used for vehicle circulation
 		sameAs : road_segments
 System environnement :
 	weather_conditions
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/Thing/NamedIndividual/ConceptInstance
-		desc : Weather conditions affecting traffic and road safety
+		type : Thing/ContainedElement/DescribedThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
 		isContainedIn : urban_environment
+		desc : Weather conditions affecting traffic and road safety
 		sameAs : weather_conditions
 	surrounding_infrastructure
-		type : DescribedThing/Component/ContainedElement/ImplementationThing/Thing/NamedIndividual/ConceptInstance
-		desc : Buildings, bridges, and adjacent urban infrastructure
+		type : Thing/ContainedElement/DescribedThing/Component/ImplementationThing/NamedIndividual/ConceptInstance
 		isContainedIn : urban_environment
+		desc : Buildings, bridges, and adjacent urban infrastructure
 		sameAs : surrounding_infrastructure
 Data :
-	road_construction_db
-		type : Input/DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Thing/Data/NamedIndividual/ConceptInstance
-		desc : Structured dataset containing road construction activities, including work zones, and schedules
-		inputTo : ml_prediction_model/postgreSQL_database
-		fromData : construction_data_trans
-		sameAs : road_construction_db
-	road_segment_geometry
-		type : Input/DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Thing/Data/NamedIndividual/ConceptInstance
-		desc : Geospatial dataset describing road network topology
-		inputTo : graph_construction/ml_prediction_model/postgreSQL_database
-		fromData : road_segment_data_trans
-		sameAs : road_segment_geometry
 	speed_travel_time
-		type : Input/DescribedThing/Component/DTComponent/ContainedElement/FidelityThing/ImplementationThing/Thing/Data/NamedIndividual/ConceptInstance
+		type : Thing/DTComponent/Data/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/Input/NamedIndividual/ConceptInstance
 		desc : Traffic performance dataset containing speed and travel time measurements across road segments over time
-		inputTo : ml_prediction_model/postgreSQL_database
-		fromData : traffic_data_trans
 		sameAs : speed_travel_time
+		fromData : traffic_data_trans
+		inputTo : ml_prediction_model/postgreSQL_database
+	road_segment_geometry
+		type : Thing/DTComponent/Data/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/Input/NamedIndividual/ConceptInstance
+		desc : Geospatial dataset describing road network topology
+		sameAs : road_segment_geometry
+		fromData : road_segment_data_trans
+		inputTo : ml_prediction_model/postgreSQL_database/graph_construction
+	road_construction_db
+		type : Thing/DTComponent/Data/ContainedElement/DescribedThing/FidelityThing/Component/ImplementationThing/Input/NamedIndividual/ConceptInstance
+		desc : Structured dataset containing road construction activities, including work zones, and schedules
+		sameAs : road_construction_db
+		fromData : construction_data_trans
+		inputTo : ml_prediction_model/postgreSQL_database
 Rabbit exchange :
 
 Rabbit route :
