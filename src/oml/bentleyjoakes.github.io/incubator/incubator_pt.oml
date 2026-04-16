@@ -18,7 +18,6 @@ description <https://bentleyjoakes.github.io/incubator/incubator_pt#> as incubat
 	    DTDFVocab:hasSystem montreal_road_network
 	    DTDFVocab:hasAgent road_users, city_operators
 	    DTDFVocab:hasEnvironment urban_environment
-	    base:desc "Digital twin system for Montreal road network monitoring and decision support"
 	]
 	
 	// C2: Acting Components
