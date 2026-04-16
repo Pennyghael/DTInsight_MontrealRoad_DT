@@ -7,7 +7,7 @@ description <https://bentleyjoakes.github.io/incubator/incubator_pt#> as incubat
 	extends <https://bentleyjoakes.github.io/incubator/incubator_dt#> as dt
 	
 	// C1: System under study
-		instance montreal_road_network : DTDFVocab:System[
+	instance montreal_road_network : DTDFVocab:System[
 		DTDFVocab:purpose "support the city on roadwork decision"
 		DTDFVocab:multiplicity 1
 		base:contains road_segments, constructions
