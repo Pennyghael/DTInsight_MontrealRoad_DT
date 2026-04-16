@@ -1,0 +1,78 @@
+description <https://bentleyjoakes.github.io/incubator/incubator_pt#> as incubator_pt {
+	
+	uses <https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#> as DTDFVocab
+
+	uses <https://bentleyjoakes.github.io/DTDF/vocab/base#> as base
+	extends <https://bentleyjoakes.github.io/DTDF/desc/baseDesc#> as baseDesc
+	extends <https://bentleyjoakes.github.io/incubator/incubator_dt#> as dt
+	
+	// C1: System under study
+		instance montreal_road_network : DTDFVocab:System[
+		DTDFVocab:purpose "support the city on roadwork decision"
+		DTDFVocab:multiplicity 1
+		base:contains road_segments, constructions
+		base:desc "The road network of Montreal"
+	]
+	
+	instance pt : DTDFVocab:SystemUnderStudy [
+		DTDFVocab:hasSystem montreal_road_network
+		DTDFVocab:hasAgent road_users
+		DTDFVocab:hasEnvironment urban_environment
+	]
+	
+	// C2: Acting Components
+	instance road_segments : DTDFVocab:ActingComponent[
+		base:desc "Road sections used for vehicle circulation"
+	]
+	instance constructions : DTDFVocab:ActingComponent[
+		base:desc "Road areas affected by ongoing construction or maintenance work"
+	]
+	
+	// Two inside box, one outside
+	// C3: Physical sensing components
+	instance traffic_dataset : DTDFVocab:SensingComponent
+	instance construction_dataset : DTDFVocab:SensingComponent
+	instance road_segment_dataset : DTDFVocab:SensingComponent
+	
+	// C4: Physical-to-virtual interaction
+	instance traffic_data_trans : DTDFVocab:DataTransmitted [
+		DTDFVocab:producedFrom traffic_dataset
+		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:IsAutomatic true
+		DTDFVocab:asData dt:speed_travel_time
+	]
+	
+	instance construction_data_trans : DTDFVocab:DataTransmitted [
+		DTDFVocab:producedFrom construction_dataset
+		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:IsAutomatic true
+		DTDFVocab:asData dt:road_construction_db
+	]
+	
+	instance road_segment_data_trans : DTDFVocab:DataTransmitted [
+		DTDFVocab:producedFrom road_segment_dataset
+		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:IsAutomatic true
+		DTDFVocab:asData dt:road_segment_geometry
+	]
+	
+	instance road_users : DTDFVocab:Agent [
+		base:desc "Drivers, cyclists, pedestrians, and public transport users"
+	]
+	
+	instance city_operators : DTDFVocab:Agent [
+		base:desc "Municipal planners and road maintenance teams"
+	]
+	
+	instance urban_environment : DTDFVocab:Environment [
+		base:contains weather_conditions
+		base:contains surrounding_infrastructure
+	]
+	
+	instance weather_conditions : DTDFVocab:Component [
+		base:desc "Weather conditions affecting traffic and road safety"
+	]
+	instance surrounding_infrastructure : DTDFVocab:Component [
+		base:desc "Buildings, bridges, and adjacent urban infrastructure"
+	]
+}

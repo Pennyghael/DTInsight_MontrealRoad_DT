@@ -1,0 +1,151 @@
+description <https://bentleyjoakes.github.io/incubator/incubator_dt#> as incubator {
+
+	uses <https://bentleyjoakes.github.io/DTDF/vocab/DTDFVocab#> as DTDFVocab
+	
+	uses <https://bentleyjoakes.github.io/DTDF/vocab/base#> as base
+	extends <https://bentleyjoakes.github.io/DTDF/desc/baseDesc#> as baseDesc
+	
+	instance MontrealRoadDT : DTDFVocab:DigitalTwin [
+		DTDFVocab:purpose "monitor, visualize, and predict road network conditions and construction impacts in Montreal"
+		DTDFVocab:multiplicity 1
+	]
+	
+	// SERVICES (C6)
+	
+	instance what_if_service : DTDFVocab:Service[
+		DTDFVocab:provides traffic_simulation_results
+		DTDFVocab:atStage baseDesc:operation
+	]
+	instance visualization_dashboard : DTDFVocab:Service[
+		DTDFVocab:provides visualization
+		DTDFVocab:atStage baseDesc:operation
+	]
+	instance construction_prediction_service : DTDFVocab:Service [
+		DTDFVocab:provides construction_prediction
+		DTDFVocab:atStage baseDesc:operation
+	]
+	
+	// ENABLERS (C11)
+	
+	instance leaflet_map : DTDFVocab:Enabler [
+		DTDFVocab:enables what_if_service
+		DTDFVocab:enables visualization_dashboard
+	]
+	instance angular_frontend : DTDFVocab:Enabler [
+	    DTDFVocab:enables visualization_dashboard
+	]
+	instance flask_rest_api_backend : DTDFVocab:Enabler [
+		DTDFVocab:enables what_if_service
+		DTDFVocab:enables visualization_dashboard
+		DTDFVocab:enables construction_prediction_service
+	]
+	instance postgreSQL_database : DTDFVocab:Enabler [
+		DTDFVocab:enables what_if_service
+		DTDFVocab:enables visualization_dashboard
+	]
+	instance ml_prediction_model : DTDFVocab:Enabler [
+		DTDFVocab:enables construction_prediction_service
+	]
+	instance graph_construction : DTDFVocab:Enabler [
+		DTDFVocab:enables what_if_service
+	]
+	
+	// MODELS / DATA
+	
+	instance road_construction_db : DTDFVocab:Data [
+		DTDFVocab:inputTo postgreSQL_database
+		DTDFVocab:inputTo ml_prediction_model
+	]
+	instance road_segment_geometry : DTDFVocab:Data [
+		DTDFVocab:inputTo postgreSQL_database
+		DTDFVocab:inputTo ml_prediction_model
+		DTDFVocab:inputTo graph_construction
+	]
+	instance speed_travel_time : DTDFVocab:Data [
+		DTDFVocab:inputTo postgreSQL_database
+		DTDFVocab:inputTo ml_prediction_model
+	]
+	
+	// INSIGHTS/ACTIONS (C17)
+	
+	instance construction_prediction : DTDFVocab:Insight[
+		DTDFVocab:hasTimeScale baseDesc:rt
+		base:desc "prediction of future construction needed"
+	]
+	instance visualization : DTDFVocab:Insight [
+		DTDFVocab:hasTimeScale baseDesc:rt
+		base:desc "visualization of road traffic and construction events on the map"
+	]
+	instance traffic_simulation_results : DTDFVocab:Insight [
+	    DTDFVocab:hasTimeScale baseDesc:faster_trt
+	    base:desc "what-if simulation of traffic under different road closure scenarios"
+	]
+	
+	// DT CHARACTERISTICS
+	
+	// C5: Virtual to Physical Interaction
+	instance virtual_to_physical : DTDFVocab:VirtualToPhysical [
+		base:desc "The DT provides insights and scenario analysis that support decision-making for road planning and construction management."
+	]
+	
+	// C7: TimeScale
+	instance twinning_time_scale : DTDFVocab:TimeScale [
+		base:desc "The DT is synchronized with updated road construction and traffic datasets."
+	]
+	
+	// C8: Multiplicity
+	instance multiplcity : DTDFVocab:Multiplicity [
+		base:desc "The current implementation has no multiplicities, however, it is possible to deploy multiple DTs for the same PT."
+	]
+	
+	// C9: LifeCycleStage
+	instance life_cycle_stage : DTDFVocab:LifeCycleStage [
+		base:desc "The DT supports the design and the service phases. In the service phase, it supports creating, executing, saving, analyzing, evolving, and terminating."
+	]
+	
+	// C12: Constellation
+	instance constellation : DTDFVocab:Constellation [
+		base:desc "The system integrates multiple software components including an Angular frontend, Leaflet-based map visualization, Node.js backend services, PostgreSQL data storage, and machine learning prediction modules."
+	]
+	
+	// C13: EvolutionStage
+	instance evolution_stage : DTDFVocab:EvolutionStage [
+		base:desc "The DT was engineered based on a joint engineering approach. For the evolution, 10 milestones have been defined: identifying the physics for the PT, building the plant models with, characterizing the heating power, building the first physical prototype, experimentally refining the parameters for the plant model, creating the controller model, deploying the controller code into the physical controller, deploying the visualization service, providing services for state estimation and anomaly detection, and providing the service for optimizing the control policy."
+	]
+
+	// C14: FidelityConsideration
+	instance fidelity_consideration : DTDFVocab:FidelityConsideration [
+		base:desc "The models have been calibrated against experimental data and the predictive accuracy of the best model is within 2°C. The models have been validated in a controlled environment."
+	]
+	
+	// C15: TechnicalConnection
+	instance technical_connection : DTDFVocab:TechnicalConnection [
+		base:desc "The frontend communicates with the backend over HTTP REST APIs, while the backend accesses the PostgreSQL database and prediction services."
+	]
+	
+	// C16: DT hosting/deployment
+	instance deployment : DTDFVocab:Deployment [
+		base:desc "The DT is deployed as a web-based application accessible through a browser."
+	]
+	
+	// C18: Horizontal Integration
+	instance horizontal_integration : DTDFVocab:HoriIntegration [
+		base:desc "There is horizontal integration with the micro-services of the Incubator DT. The DT is able to exchange information with other information systems over RabbitMQ."
+	]
+	
+	// C19: Data ownership and privacy	
+	instance data_owneship_privacy : DTDFVocab:DataOwnershipPrivacy [
+		base:desc "Datasets have been provided online to the public. No privacy-related data are stored."
+	]
+	
+	// C20: Standardization
+	instance standardization : DTDFVocab:Standardization [
+		base:desc "Communication between services is performed through RESTful HTTP APIs and geospatial data."
+	]
+	
+	// C21: Security and safety considerations	
+	instance security_safety : DTDFVocab:SecuritySafety [
+		base:desc "Communication can be TLS encrypted through the RabbitMQ broker. The physical controller counts with a safety consideration that turns off system if the temperature read is above 60°C or if the network connection is unstable."
+	]
+	
+}
