@@ -69,11 +69,11 @@ description <https://bentleyjoakes.github.io/incubator/incubator_dt#> as incubat
 	// INSIGHTS/ACTIONS (C17)
 	
 	instance construction_prediction : DTDFVocab:Insight[
-		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:hasTimeScale baseDesc:slower_trt
 		base:desc "prediction of future construction needed"
 	]
 	instance visualization : DTDFVocab:Insight [
-		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:hasTimeScale baseDesc:slower_trt
 		base:desc "visualization of road traffic and construction events on the map"
 	]
 	instance traffic_simulation_results : DTDFVocab:Insight [

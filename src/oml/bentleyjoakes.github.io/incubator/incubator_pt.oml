@@ -7,17 +7,18 @@ description <https://bentleyjoakes.github.io/incubator/incubator_pt#> as incubat
 	extends <https://bentleyjoakes.github.io/incubator/incubator_dt#> as dt
 	
 	// C1: System under study
-	instance montreal_road_network : DTDFVocab:System[
-		DTDFVocab:purpose "support the city on roadwork decision"
-		DTDFVocab:multiplicity 1
-		base:contains road_segments, constructions
-		base:desc "The road network of Montreal"
+	instance montreal_road_network : DTDFVocab:System [
+	    DTDFVocab:purpose "Support Montreal city roadwork decision-making and traffic optimization"
+	    DTDFVocab:multiplicity 1
+	    base:contains road_segments, constructions
+	    base:desc "The road network of Montreal including traffic infrastructure and construction zones"
 	]
 	
 	instance pt : DTDFVocab:SystemUnderStudy [
-		DTDFVocab:hasSystem montreal_road_network
-		DTDFVocab:hasAgent road_users
-		DTDFVocab:hasEnvironment urban_environment
+	    DTDFVocab:hasSystem montreal_road_network
+	    DTDFVocab:hasAgent road_users, city_operators
+	    DTDFVocab:hasEnvironment urban_environment
+	    base:desc "Digital twin system for Montreal road network monitoring and decision support"
 	]
 	
 	// C2: Acting Components
@@ -37,21 +38,21 @@ description <https://bentleyjoakes.github.io/incubator/incubator_pt#> as incubat
 	// C4: Physical-to-virtual interaction
 	instance traffic_data_trans : DTDFVocab:DataTransmitted [
 		DTDFVocab:producedFrom traffic_dataset
-		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:hasTimeScale baseDesc:slower_trt
 		DTDFVocab:IsAutomatic true
 		DTDFVocab:asData dt:speed_travel_time
 	]
 	
 	instance construction_data_trans : DTDFVocab:DataTransmitted [
 		DTDFVocab:producedFrom construction_dataset
-		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:hasTimeScale baseDesc:slower_trt
 		DTDFVocab:IsAutomatic true
 		DTDFVocab:asData dt:road_construction_db
 	]
 	
 	instance road_segment_data_trans : DTDFVocab:DataTransmitted [
 		DTDFVocab:producedFrom road_segment_dataset
-		DTDFVocab:hasTimeScale baseDesc:rt
+		DTDFVocab:hasTimeScale baseDesc:slower_trt
 		DTDFVocab:IsAutomatic true
 		DTDFVocab:asData dt:road_segment_geometry
 	]
