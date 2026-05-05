@@ -32,47 +32,47 @@
         <tr>
 			<td class="characteristic-id">C<sub>6</sub></td>
             <td>DT services</td>
-            <td>visualization_dashboard: Web-based visualization service providing interactive map and dashboard for monitoring road network state and simulations<br>what_if_service: Interactive simulation service that computes traffic scenarios under different road closure or disruption conditions<br>construction_prediction_service: Predictive analytics service using historical and spatial data to estimate future road construction needs and impacts</td>
+            <td>visualization_dashboard: Web-based visualization service providing interactive map and dashboard for monitoring road network state and simulations<br>construction_prediction_service: Predictive analytics service using historical and spatial data to estimate future road construction needs and impacts<br>what_if_service: Interactive simulation service that computes traffic scenarios under different road closure or disruption conditions</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>7</sub></td>
             <td>Twinning time-scale</td>
-            <td>The DT is synchronized with updated road construction and traffic datasets.<br>The DT is synchronized with updated road construction and traffic datasets.<br>Interactive computation with near-instant response time based on static or preloaded data</td>
+            <td>The DT is synchronized with updated road construction and traffic datasets.<br>Interactive computation with near-instant response time based on static or preloaded data<br>The DT is synchronized with updated road construction and traffic datasets.</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>8</sub></td>
             <td>Multiplicities</td>
-            <td>The current implementation has no multiplicities, however, it is possible to deploy multiple DTs for the same PT.</td>
+            <td>The current implementation represents a single Digital Twin instance of the Montreal road network, although the framework could be extended to support multiple instances for different cities or scenarios.</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>9</sub></td>
             <td>Life-cycle stages</td>
-            <td>The DT supports the design and the service phases. In the service phase, it supports creating, executing, saving, analyzing, evolving, and terminating.</td>
+            <td>The DT supports the design and the service phases. In the service phase, it supports creating, executing, saving, analyzing and terminating.</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>10</sub></td>
             <td>DT models and data</td>
-            <td>Model:<br>No data available<br><br>Data:<br>speed_travel_time: Traffic performance dataset containing speed and travel time measurements across road segments over time<br>road_segment_geometry: Geospatial dataset describing road network topology<br>road_construction_db: Structured dataset containing road construction activities, including work zones, and schedules</td>
+            <td>Model:<br>No data available<br><br>Data:<br>road_construction_db: Structured dataset containing road construction activities, including work zones, and schedules<br>road_segment_geometry: Geospatial dataset describing road network topology<br>speed_travel_time: Traffic performance dataset containing speed and travel time measurements across road segments over time</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>11</sub></td>
             <td>Tooling and enablers</td>
-            <td>ml_prediction_model: Machine learning model used to predict construction needs and traffic impact patterns<br>postgreSQL_database: Relational database storing structured road network data, traffic information, and simulation results<br>graph_construction: Graph-based processing engine used to model and analyze road network relationships for scenario simulation<br>leaflet_map: Interactive map library used to display road network layers, traffic segments, and construction zones<br>angular_frontend: Web frontend framework responsible for rendering the DTInsight dashboard and user interface<br>flask_rest_api_backend: REST API backend providing data access, processing, and orchestration for services</td>
+            <td>angular_frontend: Web frontend framework responsible for rendering the DTInsight dashboard and user interface<br>flask_rest_api_backend: REST API backend providing data access, processing, and orchestration for services<br>graph_construction: Graph-based processing engine used to model and analyze road network relationships for scenario simulation<br>leaflet_map: Interactive map library used to display road network layers, traffic segments, and construction zones<br>ml_prediction_model: Machine learning model used to predict construction needs and traffic impact patterns<br>postgreSQL_database: Relational database storing structured road network data, traffic information, and simulation results</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>12</sub></td>
             <td>DT constellation</td>
-            <td>The system integrates multiple software components including an Angular frontend, Leaflet-based map visualization, Node.js backend services, PostgreSQL data storage, and machine learning prediction modules.</td>
+            <td>The system integrates multiple software components including an Angular frontend, Leaflet-based map visualization, Flask REST API backend services, PostgreSQL data storage, and machine learning prediction modules.</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>13</sub></td>
             <td>Twinning process and DT evolution</td>
-            <td>The DT was engineered based on a joint engineering approach. For the evolution, 10 milestones have been defined: identifying the physics for the PT, building the plant models with, characterizing the heating power, building the first physical prototype, experimentally refining the parameters for the plant model, creating the controller model, deploying the controller code into the physical controller, deploying the visualization service, providing services for state estimation and anomaly detection, and providing the service for optimizing the control policy.</td>
+            <td>The Digital Twin was developed incrementally through several stages: collection of open datasets related to road networks, traffic, and construction; integration and structuring of geospatial data into a consistent road network model; development of data storage and processing pipelines; implementation of interactive visualization and what-if simulation services; integration of machine learning models for construction prediction; and continuous refinement of data quality, simulation accuracy, and user interaction capabilities.</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>14</sub></td>
             <td>Fidelity and validity considerations</td>
-            <td>The models have been calibrated against experimental data and the predictive accuracy of the best model is within 2°C. The models have been validated in a controlled environment.</td>
+            <td>The fidelity of the Digital Twin relies on the quality and granularity of publicly available datasets, including road geometry, traffic conditions, and construction information. The road network is represented with accurate geospatial data, while traffic and construction data are periodically updated but may not reflect real-time conditions. Simulation and prediction services provide approximate results based on historical data and learned patterns, and are intended to support decision-making rather than provide exact forecasts.</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>15</sub></td>
@@ -87,12 +87,12 @@
         <tr>
 			<td class="characteristic-id">C<sub>17</sub></td>
             <td>Insights and decision making</td>
-            <td>visualization: visualization of road traffic and construction events on the map<br>construction_prediction: prediction of future construction needed<br>traffic_simulation_results: what-if simulation of traffic under different road closure scenarios</td>
+            <td>construction_prediction: prediction of future construction needed<br>traffic_simulation_results: what-if simulation of traffic under different road closure scenarios<br>visualization: visualization of road traffic and construction events on the map</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>18</sub></td>
             <td>Horizontal integration</td>
-            <td>There is horizontal integration with the micro-services of the Incubator DT. The DT is able to exchange information with other information systems over RabbitMQ.</td>
+            <td>The Digital Twin integrates multiple software components across the same operational layer, including a web-based frontend, backend services, data storage, and machine learning modules. It also connects to external open datasets related to road networks, traffic conditions, and construction activities, enabling consistent data exchange and coordinated functionality across the system.</td>
 		</tr>
         <tr>
 			<td class="characteristic-id">C<sub>19</sub></td>
@@ -107,6 +107,6 @@
         <tr>
 			<td class="characteristic-id">C<sub>21</sub></td>
             <td>Security and safety considerations</td>
-            <td>Communication can be TLS encrypted through the RabbitMQ broker. The physical controller counts with a safety consideration that turns off system if the temperature read is above 60°C or if the network connection is unstable.</td>
+            <td>The Digital Twin ensures security through standard web protocols, including HTTPS for secure communication between frontend and backend services. Access to data and services is controlled via API endpoints, and no sensitive personal data is stored as the system relies on publicly available datasets. From a safety perspective, the DT does not directly control physical infrastructure, and its outputs are intended for decision support rather than real-time automated actions, reducing risks associated with incorrect predictions or simulations.</td>
 		</tr>
     </table>
